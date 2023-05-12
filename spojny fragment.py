@@ -6,9 +6,6 @@ while rows == []:
     if path.endswith(".txt") == False: path += ".txt"
     try: rows = open(path).read().split("\n")
     except: print("> Couldn't open the file! Please write the correct file path: ")
-    
-
-
 rows = [row for row in rows if row]
 
 for row in rows:
@@ -24,5 +21,4 @@ for row in rows:
         else: pass
     longestString = max(splitRow, key=len)
     print(longestString, len(longestString))
-
 input()
